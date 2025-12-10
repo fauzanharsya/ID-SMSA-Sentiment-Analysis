@@ -34,15 +34,15 @@ Below is the comprehensive summary of our experimental results, comparing conven
 
 | Model Strategy | Architecture | Input Language | Test Acc | Macro F1 | Training Time (s) | VRAM Usage (MB) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **IndoBERT (Fine-Tuning)** | Transformer | Native (ID) | **0.8146** | **0.7968** | 217.22 | 4212.0 |
-| **BERT (English Fine-Tuning)** | Transformer | Translated (EN) | 0.7948 | 0.7719 | 207.11 | 4212.0 |
-| **Hybrid IndoBERT (Frozen)** | **Hybrid** | **Native (ID)** | 0.7994 | 0.7669 | 234.91 | **1046.0** 📉 |
-| CNN (Indonesian) | Conventional | Native (ID) | 0.7523 | 0.7225 | 9.64 | ~250 |
-| GRU (Indonesian) | Conventional | Native (ID) | 0.7295 | 0.7033 | 13.11 | ~250 |
-| LSTM (Indonesian) | Conventional | Native (ID) | 0.7249 | 0.7015 | 17.11 | ~250 |
-| CNN (English) | Conventional | Translated (EN) | 0.7128 | 0.6737 | 8.05 | ~250 |
-| LSTM (English) | Conventional | Translated (EN) | 0.6991 | 0.6670 | 12.70 | ~250 |
-| GRU (English) | Conventional | Translated (EN) | 0.6960 | 0.6643 | 13.87 | ~250 |
+| **IndoBERT (Fine-Tuning)** | Transformer | Native (ID) | **0.815** | **0.797** | 217 | 4212 |
+| **BERT (English Fine-Tuning)** | Transformer | Translated (EN) | 0.795 | 0.772 | 207 | 4212 |
+| **Hybrid IndoBERT (Frozen)** | **Hybrid** | **Native (ID)** | 0.799 | 0.767 | 235 | **1046** 📉 |
+| CNN (Indonesian) | Conventional | Native (ID) | 0.752 | 0.723 | 10 | ~250 |
+| GRU (Indonesian) | Conventional | Native (ID) | 0.729 | 0.703 | 13 | ~250 |
+| LSTM (Indonesian) | Conventional | Native (ID) | 0.725 | 0.702 | 17 | ~250 |
+| CNN (English) | Conventional | Translated (EN) | 0.713 | 0.674 | 8 | ~250 |
+| LSTM (English) | Conventional | Translated (EN) | 0.699 | 0.667 | 13 | ~250 |
+| GRU (English) | Conventional | Translated (EN) | 0.696 | 0.664 | 14 | ~250 |
 
 > **Notes:**
 > *   **VRAM Usage:** For conventional models, values are estimated based on peak active memory (~250MB) as TensorFlow's greedy allocation often reports maximum available memory in logs.
@@ -75,3 +75,4 @@ pip install tensorflow transformers scikit-learn pandas numpy matplotlib seaborn
 
 
 *Computer Science Department, Bina Nusantara University*
+
